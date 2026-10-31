@@ -3,7 +3,7 @@ const pool = require("../config/db");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-// Admin login
+
 const adminLogin = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -15,7 +15,6 @@ const adminLogin = async (req, res) => {
       });
     }
 
-    // Find admin by email
     const result = await pool.query(
       "SELECT id, name, email, password_hash FROM public.admins WHERE email = $1",
       [email.trim().toLowerCase()]
@@ -30,7 +29,6 @@ const adminLogin = async (req, res) => {
 
     const admin = result.rows[0];
 
-    // Compare entered password with hashed password
     const isPasswordValid = await bcrypt.compare(
       password,
       admin.password_hash
@@ -43,7 +41,6 @@ const adminLogin = async (req, res) => {
       });
     }
 
-    // Generate JWT token
     const token = jwt.sign(
       {
         id: admin.id,

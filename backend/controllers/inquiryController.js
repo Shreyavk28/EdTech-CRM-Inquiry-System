@@ -1,10 +1,6 @@
 
 const pool = require("../config/db");
 
-// ==================================
-// 1. CREATE NEW INQUIRY
-// ==================================
-
 const createInquiry = async (req, res) => {
   try {
     const {
@@ -92,9 +88,6 @@ const createInquiry = async (req, res) => {
 };
 
 
-// ==================================
-// 2. GET ALL INQUIRIES
-// ==================================
 
 const getAllInquiries = async (req, res) => {
   try {
@@ -153,9 +146,6 @@ const getAllInquiries = async (req, res) => {
 };
 
 
-
-
-
 const updateInquiryStatus = async (req, res) => {
   try {
     const { id } = req.params;
@@ -212,10 +202,6 @@ const updateInquiryStatus = async (req, res) => {
   }
 };
 
-
-// ==================================
-// EXPORT CONTROLLERS
-// ==================================
 
 module.exports = {
   createInquiry,

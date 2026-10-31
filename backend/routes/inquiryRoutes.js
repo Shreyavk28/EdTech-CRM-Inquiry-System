@@ -10,10 +10,8 @@ const {
   updateInquiryStatus,
 } = require("../controllers/inquiryController");
 
-// Public inquiry submission
 router.post("/", createInquiry);
 
-// Protected admin routes
 router.get("/", authenticateAdmin, getAllInquiries);
 
 router.patch("/:id/status", authenticateAdmin, updateInquiryStatus);
