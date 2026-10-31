@@ -1,10 +1,5 @@
 
 -- ============================================
--- K12 HUNAR - EDTECH CRM & INQUIRY SYSTEM
--- Database: Supabase PostgreSQL
--- ============================================
-
--- ============================================
 -- 1. ADMINS TABLE
 -- ============================================
 
@@ -79,6 +74,4 @@ ON public.inquiries(phone);
 CREATE INDEX IF NOT EXISTS idx_inquiries_created_at
 ON public.inquiries(created_at DESC);
 
--- ============================================
--- END OF DATABASE SCHEMA
--- ============================================
+
