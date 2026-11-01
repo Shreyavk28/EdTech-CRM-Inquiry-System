@@ -1,4 +1,4 @@
-# K12 Hunar – EdTech CRM & Inquiry Management System
+# EdTech CRM & Inquiry Management System
 
 A full-stack CRM inquiry management system that allows parents, students, and schools to submit inquiries and administrators to manage them through a secure dashboard.
 
